@@ -1,0 +1,23 @@
+{
+  "name": "precourse-assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest assessment.test.js",
+    "analyze": "npm test -- --json --outputFile=test-output.json; curl -H 'Content-Type: application/json' -X POST -d '@./test-output.json' https://precourse-assessment-api.herokuapp.com/$TRAVIS_PULL_REQUEST_SLUG"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LambdaSchool/Precourse-Assessment.git"
+  },
+  "author": "Lambda School",
+  "bugs": {
+    "url": "https://github.com/LambdaSchool/Precourse-Assessment/issues"
+  },
+  "homepage": "https://github.com/LambdaSchool/Precourse-Assessment#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^22.4.4"
+  }
+}
